@@ -69,7 +69,7 @@ eval("var button = document.getElementById('print');\n\nfunction CallPrint(strid
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _buttons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./buttons */ \"./src/app/table/buttons.js\");\n/* harmony import */ var _global_variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../global_variables */ \"./src/app/global_variables.js\");\n/* harmony import */ var _counter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../counter */ \"./src/app/counter.js\");\n/* harmony import */ var _counter__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_counter__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\nvar display = function display() {\n  if (_global_variables__WEBPACK_IMPORTED_MODULE_1__.bookArray.length > 0) {\n    _global_variables__WEBPACK_IMPORTED_MODULE_1__.bookArray.map(function (book) {\n      var trElement = document.createElement('tr');\n      trElement.innerHTML = \" <td>\".concat(book.title, \"</td><td> \").concat(book.author, \"</td> <td>\").concat(book.category, \"</td> <td> \").concat(book.priority, \"</td>\");\n      _global_variables__WEBPACK_IMPORTED_MODULE_1__.list.append(trElement);\n      (0,_buttons__WEBPACK_IMPORTED_MODULE_0__.buttons)(book.id, trElement);\n    });\n  }\n\n  ;\n};\n\ndisplay();\n(0,_counter__WEBPACK_IMPORTED_MODULE_2__.counter)();\n\n//# sourceURL=webpack://webpack-tutorial/./src/app/table/bookTable.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _buttons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./buttons */ \"./src/app/table/buttons.js\");\n/* harmony import */ var _global_variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../global_variables */ \"./src/app/global_variables.js\");\n/* harmony import */ var _counter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../counter */ \"./src/app/counter.js\");\n/* harmony import */ var _counter__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_counter__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nvar bookArray = JSON.parse(localStorage.getItem(\"allBooks\"));\n\nvar display = function display() {\n  if (bookArray.length > 0) {\n    bookArray.map(function (book) {\n      var trElement = document.createElement('tr');\n      trElement.innerHTML = \" <td>\".concat(book.title, \"</td><td> \").concat(book.author, \"</td> <td>\").concat(book.category, \"</td> <td> \").concat(book.priority, \"</td>\");\n      _global_variables__WEBPACK_IMPORTED_MODULE_1__.list.append(trElement);\n      (0,_buttons__WEBPACK_IMPORTED_MODULE_0__.buttons)(book.id, trElement);\n    });\n  }\n\n  ;\n};\n\ndisplay();\n(0,_counter__WEBPACK_IMPORTED_MODULE_2__.counter)();\n\n//# sourceURL=webpack://webpack-tutorial/./src/app/table/bookTable.js?");
 
 /***/ }),
 
@@ -228,7 +228,7 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("a269fab3288e843ed81a")
+/******/ 		__webpack_require__.h = () => ("15a5f1984990af161d6d")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
