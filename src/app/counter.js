@@ -3,7 +3,7 @@ const counter = () => {
     let bookArray = JSON.parse(localStorage.getItem("allBooks")); 
     let catArr = Array.prototype.slice.call(categories);
     let categoryItems = document.getElementsByClassName('category_count');
-    let counter = document.getElementById('licznik');
+    let counter = document.getElementById('total');
     console.log(bookArray)
 
     counter.innerText = `Total: ${bookArray.length}`;
