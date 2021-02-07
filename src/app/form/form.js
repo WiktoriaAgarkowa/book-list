@@ -3,6 +3,7 @@ import {buttons} from '../table/buttons';
 
 let form = document.querySelector('form');
 const list = document.getElementById('book_list');
+let sortPriority = document.querySelector('.sort_priority');
 
 const addBook = e => {
 
@@ -29,6 +30,8 @@ const addBook = e => {
         trElement.innerHTML = ` <td>${newBook.title}</td><td> ${newBook.author}</td> <td>${newBook.category}</td> <td> ${newBook.priority}</td>`;
 
         list.append(trElement);
+
+        sortPriority.disabled = false;
 
         //LOCALSTORAGE
 

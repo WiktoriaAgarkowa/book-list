@@ -1,10 +1,7 @@
 import {buttons} from './buttons';
 import {list} from '../global_variables';
 
-let bookArray = JSON.parse(localStorage.getItem("allBooks"));
-
 let sortPriority = document.querySelector('.sort_priority');
-
 
 function compare( a, b) {
     if ( b.priority < a.priority ){
@@ -17,12 +14,12 @@ function compare( a, b) {
 }
 
 function sort() {
+    let bookArray = JSON.parse(localStorage.getItem("allBooks"));
+    bookArray.sort(compare)
 
     list.innerHTML = '';
 
     if(bookArray.length > 0) {
-        
-        bookArray.sort(compare)
             bookArray.map(book => {
                 let trElement = document.createElement('tr');
 
@@ -33,9 +30,7 @@ function sort() {
                 buttons(book.id, trElement)
     
             })
-    };
+    }
 }
 
-
 sortPriority.addEventListener('click', sort);
-
