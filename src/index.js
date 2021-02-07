@@ -1,4 +1,3 @@
-// import { atRule } from 'postcss';
 import './styles/main.scss';
 
 require('./app/global_variables.js');
