@@ -8,3 +8,4 @@ require('./app/form/form.js');
 require('./app/form/category_setting');
 require('./app/table/filter');
 require('./app/print');
+require('./app/table/sort')
