@@ -2,9 +2,10 @@ import {buttons} from './buttons';
 import {list} from '../global_variables';
 import { counter } from '../counter';
 
-let bookArray = JSON.parse(localStorage.getItem("allBooks"));
-
 const display = () => {
+    
+    let bookArray = JSON.parse(localStorage.getItem("allBooks"));
+
     if(bookArray.length > 0) {
         bookArray.map(book => {
     
