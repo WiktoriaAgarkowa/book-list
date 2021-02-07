@@ -32,11 +32,12 @@ const addBook = e => {
 
         //LOCALSTORAGE
 
-        var existBookArray = JSON.parse(localStorage.getItem("allBooks"));
+        var bookArray = JSON.parse(localStorage.getItem("allBooks"));
+        if(bookArray == null) bookArray = [];
 
         localStorage.setItem("book", JSON.stringify(newBook));
-        existBookArray.push(newBook);
-        localStorage.setItem("allBooks", JSON.stringify(existBookArray));
+        bookArray.push(newBook);
+        localStorage.setItem("allBooks", JSON.stringify(bookArray));
 
 
         buttons(newBook.id, trElement)
