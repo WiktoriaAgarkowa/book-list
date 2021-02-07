@@ -2,6 +2,8 @@ import {buttons} from './buttons';
 import {list} from '../global_variables';
 
 let bookArray = JSON.parse(localStorage.getItem("allBooks"));
+if(bookArray == null) bookArray = [];
+
 let sortPriority = document.querySelector('.sort_priority');
 
 
@@ -36,9 +38,5 @@ function sort() {
 }
 
 
-console.log(bookArray)
-  
-bookArray.sort(compare)
-
-sortPriority.addEventListener('click', sort)
+sortPriority.addEventListener('click', sort);
 
