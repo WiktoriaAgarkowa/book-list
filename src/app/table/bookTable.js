@@ -5,6 +5,7 @@ import { counter } from '../counter';
 const display = () => {
     
     let bookArray = JSON.parse(localStorage.getItem("allBooks"));
+    if(bookArray == null) bookArray = [];
 
     if(bookArray.length > 0) {
         bookArray.map(book => {
