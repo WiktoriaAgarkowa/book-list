@@ -1,7 +1,7 @@
 export const counter = () => {
     let categories = document.querySelectorAll('option');
 
-    let bookArray = JSON.parse(localStorage.getItem("allBooks"));
+    let bookArray = JSON.parse(localStorage.getItem('allBooks'));
     if(bookArray == null) bookArray = [];
 
     let catArr = Array.prototype.slice.call(categories);
@@ -14,7 +14,7 @@ export const counter = () => {
 
         catArr.map(cat => {
         
-            var count = 0;
+            let count = 0;
     
             bookArray.filter(book => {
                 if(book.category === cat.innerText) {

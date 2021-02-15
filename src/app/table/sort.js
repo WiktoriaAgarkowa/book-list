@@ -7,14 +7,15 @@ function compare( a, b) {
     if ( b.priority < a.priority ){
       return -1;
     }
-    if ( b.priority > a.priority ){
+    else if ( b.priority > a.priority ){
       return 1;
     }
     return 0;
 }
 
 function sort() {
-    let bookArray = JSON.parse(localStorage.getItem("allBooks"));
+
+    let bookArray = JSON.parse(localStorage.getItem('allBooks'));
     bookArray.sort(compare)
 
     list.innerHTML = '';

@@ -35,12 +35,12 @@ const addBook = e => {
 
         //LOCALSTORAGE
 
-        var bookArray = JSON.parse(localStorage.getItem("allBooks"));
+        var bookArray = JSON.parse(localStorage.getItem('allBooks'));
         if(bookArray == null) bookArray = [];
 
-        localStorage.setItem("book", JSON.stringify(newBook));
+        localStorage.setItem('book', JSON.stringify(newBook));
         bookArray.push(newBook);
-        localStorage.setItem("allBooks", JSON.stringify(bookArray));
+        localStorage.setItem('allBooks', JSON.stringify(bookArray));
 
 
         buttons(newBook.id, trElement)
@@ -59,9 +59,9 @@ const addBook = e => {
 
 const validateForm = e => {
     e.preventDefault();
-    if (title.value === "" ) {
+    if (title.value === '' ) {
         title.classList.add('error')
-    } if (author.value === "") {
+    } if (author.value === '') {
         author.classList.add('error');
     } else {
         author.classList.remove('error');

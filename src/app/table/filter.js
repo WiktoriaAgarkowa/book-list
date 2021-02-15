@@ -1,7 +1,6 @@
 import {buttons} from './buttons';
-import {list} from '../global_variables';
+import {list, bookArray} from '../global_variables';
 
-let bookArray = JSON.parse(localStorage.getItem("allBooks"));
 let filterAuthor = document.querySelector('.filter_author');
 let filterPriority = document.querySelector('.filter_priority');
 let filterCategory = document.querySelector('.filter_category');

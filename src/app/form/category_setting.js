@@ -1,5 +1,3 @@
-import { counter } from "../counter";
-
 const addBtn = document.getElementById('add_category_btn');
 addBtn.addEventListener('click', addCategory);
 
@@ -9,7 +7,7 @@ function addCategory() {
 
     if(inputCategory.classList[1] !== 'open') {
         inputCategory.classList.add('open'); 
-    } if(inputCategory.value === '') {
+    } else if(inputCategory.value === '') {
         return
     } else {
         let category = document.getElementById('category');

@@ -2,7 +2,7 @@ import {counter} from '../counter';
 
 export const buttons = (x, y) => {
 
-    const editButton = document.createElement('button');
+    let editButton = document.createElement('button');
     editButton.innerText = 'Edit';
     editButton.classList.add('edit_btn');
     y.append(editButton);
@@ -19,26 +19,26 @@ export const buttons = (x, y) => {
 
 function deleteBook(e) {
     const item = e.target;
-    if (item.classList[0] === "delete_btn") {
+    if (item.classList[0] === 'delete_btn') {
         const book = item.parentElement;
         book.remove();
     }   
 };
 
 function removeBookFromArray(bookId) {
-let bookArray = JSON.parse(localStorage.getItem("allBooks"));
-const indexOfBookToDelete = bookArray.findIndex((book) => book.id === bookId);
+let bookArray = JSON.parse(localStorage.getItem('allBooks'));
+let indexOfBookToDelete = bookArray.findIndex((book) => book.id === bookId);
 
-bookArray = JSON.parse(localStorage.getItem("allBooks"));
+bookArray = JSON.parse(localStorage.getItem('allBooks'));
 bookArray.splice(indexOfBookToDelete,1);
-localStorage.setItem("allBooks",JSON.stringify(bookArray));
+localStorage.setItem('allBooks',JSON.stringify(bookArray));
 counter();
 };
 
 function editBook (e) {
     console.log('działa')
-    const item = e.target;
-    const book = item.parentElement;
+    let item = e.target;
+    let book = item.parentElement;
     if (!book.hasAttribute('contenteditable')){
         book.setAttribute('contenteditable', 'true');
         book.classList.add('edit');

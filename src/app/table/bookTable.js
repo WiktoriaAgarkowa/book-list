@@ -6,7 +6,7 @@ let sortPriority = document.querySelector('.sort_priority');
 
 const display = () => {
     
-    let bookArray = JSON.parse(localStorage.getItem("allBooks"));
+    let bookArray = JSON.parse(localStorage.getItem('allBooks'));
     if(bookArray == null){
         bookArray = [];
         sortPriority.disabled = true;
